@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <button class="toggle-button" (click)="toggleSidebar()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  
+  <div class="sidebar" [class.open]="isOpen">
+    <ul class="nav-links">
+      <li routerLink="/inicio" routerLinkActive="active" (click)="navigate()">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </li>
+      <li routerLink="/listar-estudiantes" routerLinkActive="active" (click)="navigate()">
+        <i class="fas fa-list"></i>
+        <span>Listar Estudiantes</span>
+      </li>
+      <li routerLink="/agregar-estudiante" routerLinkActive="active" (click)="navigateAndReset()">
+        <i class="fas fa-user-plus"></i>
+        <span>Agregar Estudiante</span>
+      </li>
+      <li routerLink="/consultas-estudiantes" routerLinkActive="active" (click)="navigate()">
+        <i class="fas fa-search"></i>
+        <span>Consultas</span>
+      </li>
+    </ul>
+  </div>
+</nav>

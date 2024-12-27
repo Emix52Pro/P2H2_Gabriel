@@ -1,0 +1,45 @@
+<div class="contenedor-estudiantes">
+    <h2>Lista de Estudiantes</h2>
+    
+    <table class="tabla-estudiantes">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Cédula</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Sexo</th>
+          <th>P1</th>
+          <th>P2</th>
+          <th>CF</th>
+          <th>ER</th>
+          <th>ND</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let estudiante of estudiantes$ | async">
+          <td>{{ estudiante.codigo }}</td>
+          <td>{{ estudiante.cedula }}</td>
+          <td>{{ estudiante.nombres }}</td>
+          <td>{{ estudiante.apellidos }}</td>
+          <td>{{ estudiante.sexo }}</td>
+          <td>{{ estudiante.P1 }}</td>
+          <td>{{ estudiante.P2 }}</td>
+          <td>{{ estudiante.CF | number:'1.2-2' }}</td>
+          <td>{{ estudiante.ER || '-' }}</td>
+          <td>{{ estudiante.ND | number:'1.2-2' }}</td>
+          <td [ngClass]="{'aprobado': estudiante.estadoAprobatorio === 'Aprobado', 
+                          'reprobado': estudiante.estadoAprobatorio === 'Reprobado'}">
+            {{ estudiante.estadoAprobatorio }}
+          </td>
+          <td>
+            <button class="boton-editar" (click)="editarEstudiante(estudiante)">Editar</button>
+            <button class="boton-eliminar" (click)="eliminarEstudiante(estudiante.codigo)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

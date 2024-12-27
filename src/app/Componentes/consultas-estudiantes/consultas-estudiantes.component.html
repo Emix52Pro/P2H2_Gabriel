@@ -1,0 +1,29 @@
+<div class="dashboard-container">
+    <!-- Podemos envolver tu grid en un contenedor más semántico -->
+    <div class="chart-grid">
+      <!-- Fila 1 de gráficos -->
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Porcentaje de Aprobación</h3>
+          <div #aprobadosChart class="chart-container"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Aprobación por Género</h3>
+          <div #generoChart class="chart-container"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Distribución de Notas</h3>
+          <div #promedioScatterChart class="chart-container"></div>
+        </div>
+      </div>
+  
+      <!-- Gráfico grande a lo ancho -->
+      <div class="chart-row">
+        <div class="chart-card full-width">
+          <h3>Top 5 Estudiantes y Promedio General</h3>
+          <div #promedioChart class="chart-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

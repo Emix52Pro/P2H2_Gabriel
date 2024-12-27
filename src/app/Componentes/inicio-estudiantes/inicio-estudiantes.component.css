@@ -1,0 +1,84 @@
+/* Estilos principales */
+.home {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar */
+  }
+  
+  /* Estilo del título */
+  .title {
+    font-size: 2.5rem; /* Tamaño del texto */
+    font-weight: bold;
+    color: #004085; /* Azul oscuro */
+    margin-bottom: 20px;
+  }
+  
+  /* Descripción */
+  .description {
+    font-size: 1.2rem;
+    color: #555; /* Color de texto */
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  /* Contenedor de la imagen */
+  .image-container {
+    max-width: 100%; /* Ancho completo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .image-container img {
+    max-width: 90%; /* Imagen adaptable */
+    height: auto; /* Mantener proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  }
+  
+  /* Animación de fadeIn */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem; /* Tamaño más pequeño en pantallas móviles */
+    }
+  
+    .description {
+      font-size: 1rem; /* Ajustar texto */
+    }
+  
+    .image-container img {
+      max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  
